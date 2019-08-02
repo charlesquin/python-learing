@@ -3,7 +3,7 @@
 
 Python code project. Functional but needs changes. 
 
-Created "during the Complete Python Bootcamp: Go from zero to hero in Python 3" course
+Created during the "Complete Python Bootcamp: Go from zero to hero in Python 3" course
 
 https://www.udemy.com/complete-python-bootcamp/
 
