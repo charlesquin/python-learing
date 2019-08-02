@@ -1,3 +1,16 @@
+"""""
+8/2/2019
+
+Python code project. Functional but needs changes. 
+
+Created "during the Complete Python Bootcamp: Go from zero to hero in Python 3" course
+
+https://www.udemy.com/complete-python-bootcamp/
+
+"""
+
+
+
 import random
 
 suits = ('Hearts', 'Diamonds', 'Spades', 'Clubs')
@@ -38,7 +51,9 @@ class Deck:
         single_card = self.deck.pop()
         return single_card
 
+
 class Hand():
+
     def __init__(self):
         self.cards = []  # start with an empty list as we did in the Deck class
         self.value = 0   # start with zero value
@@ -59,8 +74,7 @@ class Hand():
             self.aces -= 1 
 
 
-class Chips:
-    
+class Chips:    
 
     def __init__(self):
         self.total = 100  # This can be set to a default value or supplied by a user input
@@ -96,8 +110,6 @@ def hit(deck,hand):
     hand.add_card(deck.deal()) 
     hand.adjust_for_ace()
     
-    pass
-
 
 def hit_or_stand(deck,hand):
     
@@ -124,23 +136,24 @@ def player_busts(dealer,player,chips):
     print("Player busts!")
     chips.lose_bet()
 
+
 def player_wins(dealer,player,chips):
     print("Player wins!")
     chips.win_bet()
 
+
 def dealer_busts(dealer,player,chips):
     print("Dealer busts!")
     chips.win_bet()
+
     
 def dealer_wins(dealer,player,chips):
     print("Dealer wins!")
     chips.lose_bet()
+
     
 def push():
     print("Player and dealer tie! Bust!")
-
-
-
 
 
 while True:
@@ -149,7 +162,6 @@ while True:
     print("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~")
     print("       Welcome to Blackjack!       ")
     print("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~")
-    
 
     
     # Create & shuffle the deck, deal two cards to each player
@@ -164,20 +176,16 @@ while True:
         
     # Set up the Player's chips
     player_chips = Chips()
-    print(f'Player has {player_chips.total} total chips')
-    
+    print(f'Player has {player_chips.total} total chips')    
     
     # Prompt the Player for their bet
     take_bet()
-
     
     # Show cards (but keep one dealer card hidden)
     print("Dealing the cards!")
     show_some(player,dealer)
     
-    playing = True
-    
-    
+    playing = True   
     
     while playing:  # recall this variable from our hit_or_stand function
     
@@ -196,8 +204,7 @@ while True:
             playing = False
             break
         else:
-            pass
-            
+            pass            
             
 
     # If Player hasn't busted, play Dealer's hand until Dealer reaches 17
